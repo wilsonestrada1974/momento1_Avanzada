@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Momento 1</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="estilos.css">
+  <script src="process.js"></script>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+    <!-- Brand/logo -->
+    <a class="navbar-brand">
+      <h2>DESARROLLO SOFTWARE SAS</h2>
+    </a>
+
+    <!-- Links -->
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="./index.html">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="./services.html">Services</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="./index.html">Company</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="./login.html">Logout</a>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <h2>Crear un Nuevo Servicio</h2>
+
+    <form>
+      <label>Tipo de Servicio: </label>
+      <input type="text" class=form-control id=sevice name=service>
+      <label>cantidad: </label>
+      <input type="number" class=form-control id=cant name=cant>
+      <label>Valor: </label>
+      <input type="number" class="form-control" id="value" name="value">
+      <br>
+      <button type="button" class="btn btn-primary" id="save" name="save" onclick="prosesar()">GRABAR</button>
+
+
+    </form>
+    <br><br>
+    <script>
+
+      document.write("prueba");      
+      let acumm = 0;
+      let sum = 0;
+      let subt = 0;
+      let prom = 0;
+      
+
+     function procesar()  {
+
+        let service = document.getElementById('service').value;
+        let cant = parseInt(document.getElementById('cant').value);
+        let value = parseInt(document.getElementById('value').value);
+        document.write(service);
+        document.write(cant);
+        document.write(value);
+     }
+
+/*        
+
+          if (cant > 0 && value > 0) {
+
+            subt = cant * value;
+            sum = sum + subt;
+          }
+          acumm++;
+          prom = sum / acumm;
+        
+
+        document.write("hola");
+        document.write(value);
+        document.write()
+
+      }
+      procesar();
+*/
+    </script>
+
+  </div>
+</body>
+<footer>
+  <br>
+  <div id="footer" style="text-align: center; background-color: aquamarine;">
+    &copy; Wilson Estrada Loaiza 2020 CESDE Tel. 123456789
+
+  </div>
+</footer>
+
+</html>

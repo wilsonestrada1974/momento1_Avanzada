@@ -1,0 +1,65 @@
+.container div{
+    padding: 1em;
+    
+}
+
+.cuerpo{
+    display: grid;
+    height: auto;
+    grid-template-columns: 50% 50%;
+    gap: 1em;
+    padding: 1em;
+    
+}
+
+.cuerpo div{
+    padding: 1em;
+    
+}
+
+.cuerpo > div:hover{
+    border:1px solid blue;
+}
+
+
+.video{
+    display: grid;
+    grid-row: 1/4;
+    grid-template-columns: 40% 60%;
+    background-color: rgb(233, 240, 240);
+    padding: 1em;
+    border-radius:  1px solid #0000;
+}
+
+
+
+.element1{
+    background-color: rgb(233, 240, 240);
+    padding: 1em;
+    border: 1px solid #0000;
+    
+    align-items: center;
+    text-align: center;
+}
+
+.element2{
+    
+    background-color: rgb(233, 240, 240);
+    padding: 1em;
+      
+
+}
+
+.element3{
+    
+    background-color: rgb(233, 240, 240);
+    padding: 1em;
+    text-align: justify;
+    
+}
+
+
+.texto{
+    margin-left: 1em;
+    text-align: justify;
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Momento 1</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="estilos.css">
+  <script src="login.js"></script>
+  <script type="text/javascript">
+    function disableBackButton()
+    {
+      window.history.forward();
+    }
+    setTimeout("disableBackButton()", 0);
+     $(document).ready(function () {
+        disableBackButton();
+     });
+ </script>
+  
+
+
+</head>
+
+<body>
+
+  <br>
+  <br>
+  <br>
+
+  <div class="container">
+    <h2>INGRESO</h2>
+    <form>
+      <div class="form-group">
+        <label>Usuario:</label>
+        <input type="text" class="form-control" id="user" placeholder="Ingrese su Usuario" name="user">
+      </div>
+      <div class="form-group">
+        <label>Clave:</label>
+        <input type="password" class="form-control" id="pwd" placeholder="Ingrese su Clave" name="pwd">
+      </div>
+      <div class="form-group form-check">
+        <label class="form-check-label">
+          <input class="form-check-input" type="checkbox" name="remember"> Recordarme
+        </label>
+      </div>
+      <button type="button" class="btn btn-primary" onclick="login()">Ingresar</button>
+    </form>
+  </div>
+
+
+</body>
+
+</html>
