@@ -10,10 +10,25 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="estilos.css">
-  <script src="process.js"></script>
+  <style>
+    .resultados {
+      width: 250px;
+      float: left;
+      margin: 20px;
+      border: 1px;
+      border-color: black;
+    }
+  </style>
+  <script>
+    var acum = 0;
+    var sum = 0;
+    var prom = 0;
+  </script>
+
 </head>
 
 <body>
+
 
   <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
     <!-- Brand/logo -->
@@ -39,61 +54,38 @@
   </nav>
 
   <div class="container">
-    <h2>Crear un Nuevo Servicio</h2>
+    <div id="formulario">
+      <h2>Crear un Nuevo Servicio</h2>
 
-    <form>
-      <label>Tipo de Servicio: </label>
-      <input type="text" class=form-control id=sevice name=service>
-      <label>cantidad: </label>
-      <input type="number" class=form-control id=cant name=cant>
-      <label>Valor: </label>
-      <input type="number" class="form-control" id="value" name="value">
-      <br>
-      <button type="button" class="btn btn-primary" id="save" name="save" onclick="prosesar()">GRABAR</button>
+      <form>
+        <label>Tipo de Servicio: </label>
+        <input type="text" class=form-control id=sevice name=service>
+        <label>Descripcion: </label>
+        <input type="text" class=form-control id=cant name=cant>
+        <label>Valor: </label>
+        <input type="number" class="form-control" id="value" name="value">
+        <br>
+        <button type="button" class="btn btn-primary" id="save" name="save" onclick="prosesar()">GRABAR</button>
 
 
-    </form>
-    <br><br>
-    <script>
+      </form>
 
-      document.write("prueba");      
-      let acumm = 0;
-      let sum = 0;
-      let subt = 0;
-      let prom = 0;
-      
+    </div>
+    <div id="resultados">
+      <h3>Informacion del servicio</h3>
+      <hr>
+      <p id="p_cant_ser">
+        Cantidad de servicios: <span></span>
+      </p>
+      <p id="p_suma_ser">
+        Sumatoria de servicios: <span></span>
+      </p>
+      <p id="p_prom_ser">
+        Promedio de los servicios: <span></span>
+      </p>
+    </div>
 
-     function procesar()  {
-
-        let service = document.getElementById('service').value;
-        let cant = parseInt(document.getElementById('cant').value);
-        let value = parseInt(document.getElementById('value').value);
-        document.write(service);
-        document.write(cant);
-        document.write(value);
-     }
-
-/*        
-
-          if (cant > 0 && value > 0) {
-
-            subt = cant * value;
-            sum = sum + subt;
-          }
-          acumm++;
-          prom = sum / acumm;
-        
-
-        document.write("hola");
-        document.write(value);
-        document.write()
-
-      }
-      procesar();
-*/
-    </script>
-
-  </div>
+    <script src="process.js"></script>
 </body>
 <footer>
   <br>
